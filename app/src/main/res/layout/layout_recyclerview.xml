@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hot_city_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#F5F6FA"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:text="热门城市"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/hot_city_tv" />
+
+    <com.example.addressproject.AZSideBarView
+        android:id="@+id/azs_bv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintShape="rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
+        app:layout_constraintRight_toRightOf="@id/recyclerview"
+        app:layout_constraintTop_toTopOf="@id/recyclerview" />
+
+</android.support.constraint.ConstraintLayout>

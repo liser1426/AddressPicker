@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/white_bg_tl12_tr12_round_corner"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/select_area_title_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:text="请选择所在地区"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/select_area_title_cl"
+            app:layout_constraintRight_toRightOf="@id/select_area_title_cl"
+            app:layout_constraintTop_toTopOf="@id/select_area_title_cl"
+            app:layout_constraintBottom_toBottomOf="@id/select_area_title_cl"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/select_area_title_cl"
+            app:layout_constraintBottom_toBottomOf="@id/select_area_title_cl"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/close_village_2x" />
+    </android.support.constraint.ConstraintLayout>
+
+<!--    <android.support.constraint.ConstraintLayout-->
+<!--        android:id="@+id/area_tab_cl"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp">-->
+<!--        <TextView-->
+<!--            android:id="@+id/china_area_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="中国地区"-->
+<!--            android:textColor="@drawable/tab_address_picker_color_selector"-->
+<!--            app:layout_constraintRight_toLeftOf="@id/other_area_tv"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/area_tab_cl"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/area_tab_cl"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/other_area_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@drawable/tab_address_picker_color_selector"-->
+<!--            app:layout_constraintLeft_toRightOf="@id/china_area_tv"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/area_tab_cl"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/area_tab_cl"-->
+<!--            android:text="其他国家地区"/>-->
+<!--    </android.support.constraint.ConstraintLayout>-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_china_other_tl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabIndicatorColor="#FFD70F"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
+        app:tabSelectedTextColor="#333333"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="#666666" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="#333333"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="#666666" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never" />
+
+</LinearLayout>
